@@ -55,8 +55,8 @@ android {
         applicationId 'com.mozpara.reklamizle'
         minSdkVersion 19
         targetSdkVersion 33
-        versionCode 8
-        versionName "1.0.7"
+        versionCode 9
+        versionName "1.0.8"
         multiDexEnabled true
     }
     signingConfigs {
