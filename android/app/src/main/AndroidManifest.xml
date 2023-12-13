@@ -1,4 +1,4 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.example.gorev_yap_kazan_app">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.paranokta.parakazan">
  <queries>
             <!-- If your app checks for SMS support -->
             <intent>

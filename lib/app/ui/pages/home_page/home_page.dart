@@ -76,7 +76,7 @@ class HomePage extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text('Çark Çevir ve Ödülünü Kazan',
-                                      style: TextStyle(fontSize: 9)),
+                                      style: TextStyle(fontSize: 12.5.r)),
                                   Padding(
                                     padding:
                                         EdgeInsets.symmetric(vertical: 8.0.w),
@@ -187,8 +187,8 @@ class HomePage extends StatelessWidget {
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text('Reklam İzleyerek Sandık Açma',
-                                      style: TextStyle(fontSize: 12)),
+                                  Text('Reklam İzleyerek Sandık Aç',
+                                      style: TextStyle(fontSize: 12.5.r)),
                                   Padding(
                                     padding:
                                         EdgeInsets.symmetric(vertical: 8.0.w),
