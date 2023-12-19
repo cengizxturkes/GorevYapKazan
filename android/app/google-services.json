@@ -51,12 +51,56 @@
     },
     {
       "client_info": {
+        "mobilesdk_app_id": "1:1005984214340:android:5ff310cadb521e3ccfbb11",
+        "android_client_info": {
+          "package_name": "com.example.paranoktaparakazan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1005984214340-p9d33s860au5u5lekmjdsurcillfbe0n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgVf4PVjkGKD-hWH5I1rKEq5D3AoVtqhM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1005984214340-p9d33s860au5u5lekmjdsurcillfbe0n.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1005984214340-56i2s4ptqimh1onets9akc4mpe054fd1.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.gorevYapKazanApp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:1005984214340:android:951c6a28f4dd3b85cfbb11",
         "android_client_info": {
           "package_name": "com.mozpara.reklamizle"
         }
       },
       "oauth_client": [
+        {
+          "client_id": "1005984214340-clbmdlc81k2ji3p5ovcoce36oh22dpdi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mozpara.reklamizle",
+            "certificate_hash": "405e25583d17a601e13791a35720d66619cab846"
+          }
+        },
         {
           "client_id": "1005984214340-p9d33s860au5u5lekmjdsurcillfbe0n.apps.googleusercontent.com",
           "client_type": 3

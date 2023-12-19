@@ -63,22 +63,20 @@ class HomePage extends StatelessWidget {
                         ),
                         child: Row(
                           crossAxisAlignment: CrossAxisAlignment.center,
-                          mainAxisAlignment: MainAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             Image.asset(
                               "assets/images/roulette.png",
                               width: 80.w,
                             ),
-                            SizedBox(
-                              width: 20.w,
-                            ),
+                           
                             Padding(
                               padding: EdgeInsets.only(left: 8.0.w),
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text('Çark Çevir ve Ödülünü Kazan',
-                                      style: TextStyle(fontSize: 9)),
+                                      style: TextStyle(fontSize: 12.5.r)),
                                   Padding(
                                     padding:
                                         EdgeInsets.symmetric(vertical: 8.0.w),
@@ -183,16 +181,14 @@ class HomePage extends StatelessWidget {
                               "assets/images/chest.png",
                               width: 80.w,
                             ),
-                            SizedBox(
-                              width: 20.w,
-                            ),
+                           
                             Padding(
                               padding: EdgeInsets.only(left: 8.0.w),
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text('Reklam İzleyerek Sandık Açma',
-                                      style: TextStyle(fontSize: 9)),
+                                  Text('Reklam İzleyerek Sandık Aç',
+                                      style: TextStyle(fontSize: 12.5.r)),
                                   Padding(
                                     padding:
                                         EdgeInsets.symmetric(vertical: 8.0.w),
@@ -329,7 +325,8 @@ class HomePage extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text('Reklam İzleyerek Maden Kaz',
-                                      style: TextStyle(fontSize: 14.5.r)),
+                                      maxLines: 2,
+                                      style: TextStyle(fontSize: 12.5.r)),
                                   Padding(
                                     padding:
                                         EdgeInsets.symmetric(vertical: 8.0.w),

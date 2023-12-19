@@ -52,11 +52,11 @@ android {
     }
 
     defaultConfig {
-        applicationId 'com.mozpara.reklamizle'
+        applicationId "com.example.paranoktaparakazan"
         minSdkVersion 19
         targetSdkVersion 33
-        versionCode 8
-        versionName "1.0.7"
+        versionCode 1
+        versionName "1.0"
         multiDexEnabled true
     }
     signingConfigs {
