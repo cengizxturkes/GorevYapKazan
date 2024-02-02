@@ -217,7 +217,7 @@ class _RootPageState extends State<RootPage> {
                                                   TextButton(
                                                     onPressed: () {
                                                       c.showRewardedAd();
-                                                       c.update();
+                                                      c.update();
                                                       c.watch++;
                                                     },
                                                     child: Text("İzle"),

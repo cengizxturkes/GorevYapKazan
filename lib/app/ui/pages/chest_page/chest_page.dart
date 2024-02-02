@@ -57,7 +57,7 @@ class ChestPage extends GetView<ChestController> {
                                 padding: const EdgeInsets.only(top: 12.0),
                                 child: GestureDetector(
                                   onTap: () {
-                                     c.userSnapshot?.data()?["healt"] - 2;
+                                    c.userSnapshot?.data()?["healt"] - 2;
                                     int newMoney =
                                         c.userSnapshot?.data()?["money"] +
                                             randomNumber;
@@ -73,20 +73,20 @@ class ChestPage extends GetView<ChestController> {
                                     Navigator.of(context).pop();
                                   },
                                   child: GestureDetector(
-                                      onTap: () async{
+                                      onTap: () async {
                                         print("TIklandı");
-                                       await c.showRewardedAdGames();
-                                         int newMoney =
-                                        c.userSnapshot?.data()?["money"] +
-                                            randomNumber;
-                                    FirebaseFirestore.instance
-                                        .collection("users")
-                                        .doc(FirebaseAuth
-                                            .instance.currentUser!.uid)
-                                        .update({
-                                      "money": newMoney,
-                                    });
-                                    c.getUserInfo();
+                                        await c.showRewardedAdGames();
+                                        int newMoney =
+                                            c.userSnapshot?.data()?["money"] +
+                                                randomNumber;
+                                        FirebaseFirestore.instance
+                                            .collection("users")
+                                            .doc(FirebaseAuth
+                                                .instance.currentUser!.uid)
+                                            .update({
+                                          "money": newMoney,
+                                        });
+                                        c.getUserInfo();
                                         Navigator.of(context).pop();
                                       },
                                       child: Center(child: Text("Al"))),
