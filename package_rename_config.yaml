@@ -1,8 +1,7 @@
 package_rename_config:
   android:
     app_name: ParaNokta-ParaKazan
-    package_name: com.example.paranoktaparakazan
-    override_old_package: com.example.gorev_yap_kazan_app
+    package_name: com.uygulama.paranoktaparakazan
 
   ios:
     app_name: # (String) The display name of the ios app
