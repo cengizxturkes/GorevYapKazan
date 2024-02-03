@@ -4,9 +4,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:gorev_yap_kazan_app/app/controllers/home_controller.dart';
-import 'package:gorev_yap_kazan_app/app/ui/utils/dialog.dart';
 import '../../../../core/init/theme/color_manager.dart';
 import '../../../controllers/chest_controller.dart';
 

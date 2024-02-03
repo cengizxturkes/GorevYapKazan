@@ -9,7 +9,6 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:gorev_yap_kazan_app/app/controllers/home_controller.dart';
 import 'package:gorev_yap_kazan_app/app/ui/global_widgets/ktextformfield.dart';
-import 'package:gorev_yap_kazan_app/app/ui/utils/dynamicLink.dart';
 
 import '../../../../core/init/theme/color_manager.dart';
 import '../../../controllers/share_controller.dart';
@@ -33,7 +32,8 @@ class SharePage extends GetView<ShareController> {
                   child: Column(
                     children: [
                       Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 35.w, vertical: 24.w),
+                        padding: EdgeInsets.symmetric(
+                            horizontal: 35.w, vertical: 24.w),
                         child: Card(
                           elevation: 0,
                           child: Column(
@@ -50,10 +50,13 @@ class SharePage extends GetView<ShareController> {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Padding(
-                                      padding: EdgeInsets.symmetric(vertical: 12.w),
+                                      padding:
+                                          EdgeInsets.symmetric(vertical: 12.w),
                                       child: Text(
                                         'Arkadaşını Davet Et, Hem Sen 30 Para Kazan, Hem Arkadaşın 30 Para Kazansın Ekstra sen de %10 kazan ',
-                                        style: GoogleFonts.archivo(fontSize: 15, color: ColorManager.instance.third),
+                                        style: GoogleFonts.archivo(
+                                            fontSize: 15,
+                                            color: ColorManager.instance.third),
                                         textAlign: TextAlign.center,
                                       ),
                                     ),
@@ -65,27 +68,35 @@ class SharePage extends GetView<ShareController> {
                                 child: Column(
                                   children: [
                                     Padding(
-                                      padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 12.0),
                                       child: Text(
                                         'Referans Kodun :',
-                                        style: GoogleFonts.archivo(fontSize: 15, color: ColorManager.instance.third),
+                                        style: GoogleFonts.archivo(
+                                            fontSize: 15,
+                                            color: ColorManager.instance.third),
                                       ),
                                     ),
                                     Column(
                                       children: [
                                         TextButton(
                                           onPressed: () async {
-                                            Clipboard.setData(
-                                                    ClipboardData(text: FirebaseAuth.instance.currentUser!.uid))
+                                            Clipboard.setData(ClipboardData(
+                                                    text: FirebaseAuth.instance
+                                                        .currentUser!.uid))
                                                 .then((value) {
                                               Get.closeAllSnackbars();
-                                              Get.snackbar("Başarılı!", "Referans Kodunuz Kopyalandı",
-                                                  backgroundColor: ColorManager.instance.secondary);
+                                              Get.snackbar("Başarılı!",
+                                                  "Referans Kodunuz Kopyalandı",
+                                                  backgroundColor: ColorManager
+                                                      .instance.secondary);
                                             });
                                           },
                                           child: Text(
                                             'Kopyala',
-                                            style: TextStyle(color: ColorManager.instance.fourth),
+                                            style: TextStyle(
+                                                color: ColorManager
+                                                    .instance.fourth),
                                           ),
                                         ),
                                       ],
@@ -98,7 +109,8 @@ class SharePage extends GetView<ShareController> {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 35.w, vertical: 24.w),
+                        padding: EdgeInsets.symmetric(
+                            horizontal: 35.w, vertical: 24.w),
                         child: Card(
                           elevation: 0,
                           child: Column(
@@ -106,7 +118,8 @@ class SharePage extends GetView<ShareController> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Padding(
-                                padding: EdgeInsets.symmetric(horizontal: 40.w, vertical: 15.w),
+                                padding: EdgeInsets.symmetric(
+                                    horizontal: 40.w, vertical: 15.w),
                                 child: KTextFormField.instance.widget(
                                   context: context,
                                   controller: c1.refController,
@@ -125,41 +138,57 @@ class SharePage extends GetView<ShareController> {
                                 onTap: () async {
                                   if (c1.refController.text.isEmpty) {
                                     Get.snackbar("Hoop!", "Referans Kodun Boş",
-                                        backgroundColor: ColorManager.instance.secondary);
-                                  } else if (c1.refController.text != "https://mozpara.page.link/QYkB") {
-                                    DocumentSnapshot<Map<String, dynamic>> used = await FirebaseFirestore.instance
-                                        .collection("used")
-                                        .doc(FirebaseAuth.instance.currentUser!.uid)
-                                        .get();
-                                    if (used.data()?["used"] == true || used.data()?["used"] != null) {
+                                        backgroundColor:
+                                            ColorManager.instance.secondary);
+                                  } else if (c1.refController.text !=
+                                      "https://mozpara.page.link/QYkB") {
+                                    DocumentSnapshot<Map<String, dynamic>>
+                                        used = await FirebaseFirestore.instance
+                                            .collection("used")
+                                            .doc(FirebaseAuth
+                                                .instance.currentUser!.uid)
+                                            .get();
+                                    if (used.data()?["used"] == true ||
+                                        used.data()?["used"] != null) {
                                       Get.closeAllSnackbars();
-                                      Get.snackbar("Hoop!", "Bu Hesapta Referans Kodu Kullanmışsın");
+                                      Get.snackbar("Hoop!",
+                                          "Bu Hesapta Referans Kodu Kullanmışsın");
                                     } else {
-                                      DocumentSnapshot<Map<String, dynamic>> varMi = await FirebaseFirestore.instance
-                                          .collection("users")
-                                          .doc(c1.refController.text)
-                                          .get();
+                                      DocumentSnapshot<Map<String, dynamic>>
+                                          varMi = await FirebaseFirestore
+                                              .instance
+                                              .collection("users")
+                                              .doc(c1.refController.text)
+                                              .get();
 
                                       if (varMi.data()?["uid"] != null) {
-                                        QuerySnapshot<Map<String, dynamic>> me = await FirebaseFirestore.instance
-                                            .collection("users")
-                                            .where("uid", isEqualTo: c1.refController.text)
-                                            .get();
+                                        QuerySnapshot<Map<String, dynamic>> me =
+                                            await FirebaseFirestore.instance
+                                                .collection("users")
+                                                .where("uid",
+                                                    isEqualTo:
+                                                        c1.refController.text)
+                                                .get();
                                         if (me.docs.isNotEmpty) {
-                                          int newMoney = c.userSnapshot?.data()?["money"] + (30 + (10));
+                                          int newMoney =
+                                              c.userSnapshot?.data()?["money"] +
+                                                  (30 + (10));
                                           FirebaseFirestore.instance
                                               .collection("users")
-                                              .doc(FirebaseAuth.instance.currentUser!.uid)
+                                              .doc(FirebaseAuth
+                                                  .instance.currentUser!.uid)
                                               .update(
                                             {
                                               "money": newMoney,
                                             },
                                           );
-                                          var otherUser = await FirebaseFirestore.instance
-                                              .collection("users")
-                                              .doc(c1.refController.text)
-                                              .get();
-                                          int newPrice = otherUser.data()?["money"] + 30;
+                                          var otherUser =
+                                              await FirebaseFirestore.instance
+                                                  .collection("users")
+                                                  .doc(c1.refController.text)
+                                                  .get();
+                                          int newPrice =
+                                              otherUser.data()?["money"] + 30;
                                           FirebaseFirestore.instance
                                               .collection("users")
                                               .doc(c1.refController.text)
@@ -170,7 +199,8 @@ class SharePage extends GetView<ShareController> {
                                           );
                                           FirebaseFirestore.instance
                                               .collection("used")
-                                              .doc(FirebaseAuth.instance.currentUser!.uid)
+                                              .doc(FirebaseAuth
+                                                  .instance.currentUser!.uid)
                                               .set(
                                             {
                                               "used": true,
@@ -179,32 +209,42 @@ class SharePage extends GetView<ShareController> {
                                           c.getUserInfo();
                                           Get.closeAllSnackbars();
 
-                                          Get.snackbar("Başarılı!", "Bakiyen Sana ve Arkadaşına Eklendi",
-                                              backgroundColor: ColorManager.instance.snackbarGreen);
+                                          Get.snackbar("Başarılı!",
+                                              "Bakiyen Sana ve Arkadaşına Eklendi",
+                                              backgroundColor: ColorManager
+                                                  .instance.snackbarGreen);
                                           c.update();
-                                          print(" looooo ${otherUser.metadata}");
+                                          print(
+                                              " looooo ${otherUser.metadata}");
                                         }
                                       } else {
                                         Get.closeAllSnackbars();
-                                        Get.snackbar("Hoop!", "Böyle Bir Ref Kodu Yok",
-                                            backgroundColor: ColorManager.instance.secondary);
+                                        Get.snackbar(
+                                            "Hoop!", "Böyle Bir Ref Kodu Yok",
+                                            backgroundColor: ColorManager
+                                                .instance.secondary);
                                       }
                                     }
                                   } else {
                                     Get.closeAllSnackbars();
-                                    Get.snackbar("Hoop!", "Kendi Kodunu Kullanamazsın",
-                                        backgroundColor: ColorManager.instance.secondary);
+                                    Get.snackbar(
+                                        "Hoop!", "Kendi Kodunu Kullanamazsın",
+                                        backgroundColor:
+                                            ColorManager.instance.secondary);
                                   }
                                 },
                                 child: Container(
                                   padding: EdgeInsets.all(8.w),
                                   decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                                      borderRadius:
+                                          BorderRadius.all(Radius.circular(10)),
                                       color: ColorManager.instance.fourth),
                                   child: Text(
                                     'REFERANS KODUNU GİR',
                                     style: GoogleFonts.archivo(
-                                        color: ColorManager.instance.white, fontSize: 17, fontWeight: FontWeight.w600),
+                                        color: ColorManager.instance.white,
+                                        fontSize: 17,
+                                        fontWeight: FontWeight.w600),
                                   ),
                                 ),
                               ),

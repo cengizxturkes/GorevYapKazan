@@ -5,7 +5,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:gorev_yap_kazan_app/app/ui/pages/home_page/home_page.dart';
 
 import 'package:gorev_yap_kazan_app/app/ui/pages/register_page/registerEmailOTP.dart';
 
@@ -124,7 +123,9 @@ class RegisterPage extends GetView<RegisterController> {
                     onTap: () async {
                       if (formKey.currentState!.validate()) {
                         try {
-                          UserCredential credential = await FirebaseAuth.instance.createUserWithEmailAndPassword(
+                          UserCredential credential = await FirebaseAuth
+                              .instance
+                              .createUserWithEmailAndPassword(
                             email: c.emailController.text,
                             password: c.passwordController.text,
                           );
@@ -146,7 +147,10 @@ class RegisterPage extends GetView<RegisterController> {
                             } else {
                               print("not");
                             }
-                            await FirebaseFirestore.instance.collection("users").doc(credential.user?.uid).set(
+                            await FirebaseFirestore.instance
+                                .collection("users")
+                                .doc(credential.user?.uid)
+                                .set(
                               {
                                 "name": c.fullNameController.text,
                                 "surname": c.surnameController.text,
@@ -159,14 +163,16 @@ class RegisterPage extends GetView<RegisterController> {
                           }
                         } on FirebaseAuthException catch (e) {
                           Get.closeAllSnackbars();
-                          Get.snackbar("Error", e.message ?? "", backgroundColor: ColorManager.instance.secondary);
+                          Get.snackbar("Error", e.message ?? "",
+                              backgroundColor: ColorManager.instance.secondary);
                         } catch (e) {
                           print(e);
                         }
                       }
                     },
                     child: Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 40.w, vertical: 20.w),
+                      padding: EdgeInsets.symmetric(
+                          horizontal: 40.w, vertical: 20.w),
                       child: Container(
                         padding: EdgeInsets.only(top: 15.h, bottom: 15.h),
                         decoration: BoxDecoration(

@@ -1,6 +1,4 @@
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -14,7 +12,6 @@ import 'package:gorev_yap_kazan_app/app/ui/pages/main_page/main_page.dart';
 import 'package:gorev_yap_kazan_app/app/ui/pages/market_page/market_page.dart';
 import 'package:gorev_yap_kazan_app/app/ui/pages/pullmoney_page/pullmoney_page.dart';
 import 'package:gorev_yap_kazan_app/app/ui/pages/share_page/share_page.dart';
-import 'package:provider/provider.dart';
 
 import '../../../../core/init/theme/color_manager.dart';
 import '../../../controllers/root_controller.dart';
