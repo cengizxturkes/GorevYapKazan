@@ -1,16 +1,8 @@
-# gorev_yap_kazan_app
-
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![WhatsApp Image 2023-12-20 at 22 54 04](https://github.com/cengizxturkes/GorevYapKazan/assets/103938055/6c81b59f-5869-4dbc-834e-f19c3360f67e)
+![WhatsApp Image 2023-12-20 at 22 54 04 (1)](https://github.com/cengizxturkes/GorevYapKazan/assets/103938055/6906dea8-2659-4dc4-83ef-b22033fa52a2)
+![WhatsApp Image 2023-12-20 at 22 54 05](https://github.com/cengizxturkes/GorevYapKazan/assets/103938055/76217ab0-42bc-44f9-8e1e-dc05e38d55ee)
+![WhatsApp Image 2023-12-20 at 22 54 05 (1)](https://github.com/cengizxturkes/GorevYapKazan/assets/103938055/51a353d5-1b2a-4a27-8040-43d8c8fe3a52)
+![WhatsApp Image 2023-12-20 at 22 54 05 (2)](https://github.com/cengizxturkes/GorevYapKazan/assets/103938055/b6f431fb-e950-4d10-b186-007bc4fdb147)
+![WhatsApp Image 2023-12-20 at 22 54 05 (3)](https://github.com/cengizxturkes/GorevYapKazan/assets/103938055/10942865-45db-4acc-8394-cdc27faf6966)
+![WhatsApp Image 2023-12-20 at 22 54 06](https://github.com/cengizxturkes/GorevYapKazan/assets/103938055/e3354818-8797-4a26-a9e3-a3a1828aac97)
+![WhatsApp Image 2023-12-20 at 22 54 06 (1)](https://github.com/cengizxturkes/GorevYapKazan/assets/103938055/89e22dea-fafa-492e-b0ca-5a42cf640c0b)

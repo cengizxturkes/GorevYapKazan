@@ -26,7 +26,6 @@ class MiningPage extends GetView<MiningController> {
                 onMultipleTap: () {
                   Random random = Random();
                   int randomNumber = random.nextInt(2) + 1;
-
                   showDialog(
                     context: context,
                     builder: (BuildContext context) {

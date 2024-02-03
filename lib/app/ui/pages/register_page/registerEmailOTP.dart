@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:email_otp/email_otp.dart';
 
 import 'package:flutter/material.dart';
