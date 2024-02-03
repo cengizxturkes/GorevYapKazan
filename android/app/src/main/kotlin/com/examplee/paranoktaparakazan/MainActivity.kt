@@ -1,4 +1,4 @@
-package com.example.gorev_yap_kazan_app
+package com.examplee.paranoktaparakazan
 
 import io.flutter.embedding.android.FlutterActivity
 

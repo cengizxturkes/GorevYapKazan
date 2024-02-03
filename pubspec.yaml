@@ -36,6 +36,9 @@ dependencies:
   cupertino_icons: ^1.0.2
   get_storage:
   flutter_screenutil: ^5.6.0
+  change_app_package_name: ^1.1.0
+  package_rename: ^1.5.2
+
   provider: ^6.0.5
   animate_do: ^3.0.2
   flutter_svg: ^2.0.7
