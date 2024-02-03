@@ -70,74 +70,104 @@ class WheelPage extends GetView<WheelController> {
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    Text('1', style: GoogleFonts.archivoBlack(fontSize: 20)),
+                                    Text('1',
+                                        style: GoogleFonts.archivoBlack(
+                                            fontSize: 20)),
                                     Padding(
                                       padding: const EdgeInsets.only(left: 3.0),
-                                      child: Image.asset("assets/images/bills.png"),
+                                      child: Image.asset(
+                                          "assets/images/bills.png"),
                                     ),
                                   ],
                                 ),
-                                style: FortuneItemStyle(color: ColorManager.instance.spin1, borderWidth: 0)),
+                                style: FortuneItemStyle(
+                                    color: ColorManager.instance.spin1,
+                                    borderWidth: 0)),
                             FortuneItem(
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    Text('2', style: GoogleFonts.archivoBlack(fontSize: 20)),
+                                    Text('2',
+                                        style: GoogleFonts.archivoBlack(
+                                            fontSize: 20)),
                                     Padding(
                                       padding: const EdgeInsets.only(left: 3.0),
-                                      child: Image.asset("assets/images/bills.png"),
+                                      child: Image.asset(
+                                          "assets/images/bills.png"),
                                     ),
                                   ],
                                 ),
-                                style: FortuneItemStyle(color: ColorManager.instance.spin2, borderWidth: 0)),
+                                style: FortuneItemStyle(
+                                    color: ColorManager.instance.spin2,
+                                    borderWidth: 0)),
                             FortuneItem(
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    Text('3', style: GoogleFonts.archivoBlack(fontSize: 20)),
+                                    Text('3',
+                                        style: GoogleFonts.archivoBlack(
+                                            fontSize: 20)),
                                     Padding(
                                       padding: const EdgeInsets.only(left: 3.0),
-                                      child: Image.asset("assets/images/bills.png"),
+                                      child: Image.asset(
+                                          "assets/images/bills.png"),
                                     ),
                                   ],
                                 ),
-                                style: FortuneItemStyle(color: ColorManager.instance.spin3, borderWidth: 0)),
+                                style: FortuneItemStyle(
+                                    color: ColorManager.instance.spin3,
+                                    borderWidth: 0)),
                             FortuneItem(
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    Text('1', style: GoogleFonts.archivoBlack(fontSize: 20)),
+                                    Text('1',
+                                        style: GoogleFonts.archivoBlack(
+                                            fontSize: 20)),
                                     Padding(
                                       padding: const EdgeInsets.only(left: 3.0),
-                                      child: Image.asset("assets/images/bills.png"),
+                                      child: Image.asset(
+                                          "assets/images/bills.png"),
                                     ),
                                   ],
                                 ),
-                                style: FortuneItemStyle(color: ColorManager.instance.spin4, borderWidth: 0)),
+                                style: FortuneItemStyle(
+                                    color: ColorManager.instance.spin4,
+                                    borderWidth: 0)),
                             FortuneItem(
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    Text('2', style: GoogleFonts.archivoBlack(fontSize: 20)),
+                                    Text('2',
+                                        style: GoogleFonts.archivoBlack(
+                                            fontSize: 20)),
                                     Padding(
                                       padding: const EdgeInsets.only(left: 3.0),
-                                      child: Image.asset("assets/images/bills.png"),
+                                      child: Image.asset(
+                                          "assets/images/bills.png"),
                                     ),
                                   ],
                                 ),
-                                style: FortuneItemStyle(color: ColorManager.instance.spin5, borderWidth: 0)),
+                                style: FortuneItemStyle(
+                                    color: ColorManager.instance.spin5,
+                                    borderWidth: 0)),
                             FortuneItem(
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    Text('3', style: GoogleFonts.archivoBlack(fontSize: 20)),
+                                    Text('3',
+                                        style: GoogleFonts.archivoBlack(
+                                            fontSize: 20)),
                                     Padding(
                                       padding: const EdgeInsets.only(left: 3.0),
-                                      child: Image.asset("assets/images/bills.png"),
+                                      child: Image.asset(
+                                          "assets/images/bills.png"),
                                     ),
                                   ],
                                 ),
-                                style: FortuneItemStyle(color: ColorManager.instance.spin6, borderWidth: 0)),
+                                style: FortuneItemStyle(
+                                    color: ColorManager.instance.spin6,
+                                    borderWidth: 0)),
                           ],
                         ),
                       ),
@@ -150,7 +180,6 @@ class WheelPage extends GetView<WheelController> {
 
                               int randomNumberFirst = random.nextInt(5) + 1;
                               int randomNumber = 0;
-
                               if (randomNumberFirst == 1) {
                                 randomNumber = 2;
                               } else if (randomNumberFirst == 2) {
@@ -177,48 +206,66 @@ class WheelPage extends GetView<WheelController> {
                                     child: Column(
                                       children: [
                                         Row(
-                                          mainAxisAlignment: MainAxisAlignment.center,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
                                           children: [
                                             Text(
                                               randomNumber.toString(),
-                                              style: TextStyle(color: ColorManager.instance.fourth, fontSize: 21),
+                                              style: TextStyle(
+                                                  color: ColorManager
+                                                      .instance.fourth,
+                                                  fontSize: 21),
                                             ),
                                             Padding(
-                                              padding: const EdgeInsets.only(left: 6.0),
-                                              child: Image.asset("assets/images/bills.png"),
+                                              padding: const EdgeInsets.only(
+                                                  left: 6.0),
+                                              child: Image.asset(
+                                                  "assets/images/bills.png"),
                                             ),
                                           ],
                                         ),
                                         Padding(
-                                          padding: const EdgeInsets.only(top: 12.0),
+                                          padding:
+                                              const EdgeInsets.only(top: 12.0),
                                           child: InkWell(
                                             onTap: () {
-                                              int newMoney = c1.userSnapshot?.data()?["money"] + randomNumber;
-                                              FirebaseFirestore.instance
-                                                  .collection("users")
-                                                  .doc(FirebaseAuth.instance.currentUser!.uid)
-                                                  .update(
-                                                {
-                                                  "money": newMoney,
-                                                },
-                                              );
-                                              c1.getUserInfo();
-                                              c1.showRewardedAdGames();
+                                              c1.showRewardedAdGames(() {
+                                                int newMoney = c1.userSnapshot
+                                                        ?.data()?["money"] +
+                                                    randomNumber;
+                                                FirebaseFirestore.instance
+                                                    .collection("users")
+                                                    .doc(FirebaseAuth.instance
+                                                        .currentUser!.uid)
+                                                    .update(
+                                                  {
+                                                    "money": newMoney,
+                                                  },
+                                                );
+                                                c1.getUserInfo();
+                                              });
                                               Get.back();
                                             },
                                             child: Container(
                                               padding: EdgeInsets.all(8),
                                               decoration: BoxDecoration(
                                                   border: Border.all(
-                                                    color: ColorManager.instance.fourth,
+                                                    color: ColorManager
+                                                        .instance.fourth,
                                                   ),
-                                                  borderRadius: BorderRadius.all(Radius.circular(20)),
-                                                  color: ColorManager.instance.third),
-                                            child: Text('REKLAM İZLE ÖDÜLÜ AL',
+                                                  borderRadius:
+                                                      BorderRadius.all(
+                                                          Radius.circular(20)),
+                                                  color: ColorManager
+                                                      .instance.third),
+                                              child: Text(
+                                                  'REKLAM İZLE ÖDÜLÜ AL',
                                                   style: GoogleFonts.archivo(
-                                                      color: ColorManager.instance.fourth,
+                                                      color: ColorManager
+                                                          .instance.fourth,
                                                       fontSize: 14,
-                                                      fontWeight: FontWeight.w600)),
+                                                      fontWeight:
+                                                          FontWeight.w600)),
                                             ),
                                           ),
                                         )
@@ -237,11 +284,14 @@ class WheelPage extends GetView<WheelController> {
                                 borderRadius: BorderRadius.circular(6),
                                 color: ColorManager.instance.fourth,
                                 boxShadow: kElevationToShadow[2]),
-                            padding: EdgeInsets.symmetric(vertical: 8.h, horizontal: 50.h),
+                            padding: EdgeInsets.symmetric(
+                                vertical: 8.h, horizontal: 50.h),
                             child: Text(
                               "ÇEVİR",
                               style: TextStyle(
-                                  color: ColorManager.instance.white, fontWeight: FontWeight.bold, fontSize: 12.sp),
+                                  color: ColorManager.instance.white,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 12.sp),
                             ),
                           ),
                         ),

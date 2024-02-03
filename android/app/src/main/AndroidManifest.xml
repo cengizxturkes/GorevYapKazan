@@ -27,7 +27,7 @@
             <category android:name="android.intent.category.DEFAULT"/>
             <category android:name="android.intent.category.BROWSABLE"/>
             <data
-                android:host="com.example.gorev_yap_kazan_app"
+                android:host="com.uygulama.paranoktaparakazan"
                 android:scheme="https"/>
             </intent-filter>
             

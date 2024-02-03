@@ -26,7 +26,7 @@ class MiningPage extends GetView<MiningController> {
                 onMultipleTap: () {
                   Random random = Random();
                   int randomNumber = random.nextInt(2) + 1;
-                 
+
                   showDialog(
                     context: context,
                     builder: (BuildContext context) {
@@ -58,7 +58,7 @@ class MiningPage extends GetView<MiningController> {
                                 padding: const EdgeInsets.only(top: 12.0),
                                 child: GestureDetector(
                                   onTap: () {
-                                     c.userSnapshot?.data()?["healt"] - 1;
+                                    c.userSnapshot?.data()?["healt"] - 1;
                                     int newMoney =
                                         c.userSnapshot?.data()?["money"] +
                                             randomNumber;
@@ -74,21 +74,22 @@ class MiningPage extends GetView<MiningController> {
                                     Navigator.of(context).pop();
                                   },
                                   child: GestureDetector(
-                                      onTap: () async{
+                                      onTap: () async {
                                         print("TIklandı");
-                                       await c.showRewardedAdGames();
-                                         int newMoney =
-                                        c.userSnapshot?.data()?["money"] +
-                                            randomNumber;
-                                    FirebaseFirestore.instance
-                                        .collection("users")
-                                        .doc(FirebaseAuth
-                                            .instance.currentUser!.uid)
-                                        .update({
-                                      "money": newMoney,
-                                    });
-                                    c.getUserInfo();
-                                        Navigator.of(context).pop();
+                                        await c.showRewardedAdGames(() {
+                                          int newMoney =
+                                              c.userSnapshot?.data()?["money"] +
+                                                  randomNumber;
+                                          FirebaseFirestore.instance
+                                              .collection("users")
+                                              .doc(FirebaseAuth
+                                                  .instance.currentUser!.uid)
+                                              .update({
+                                            "money": newMoney,
+                                          });
+                                          c.getUserInfo();
+                                          Navigator.of(context).pop();
+                                        });
                                       },
                                       child: Center(child: Text("Al"))),
                                 ),

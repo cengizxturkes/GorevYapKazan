@@ -75,19 +75,20 @@ class ChestPage extends GetView<ChestController> {
                                   child: GestureDetector(
                                       onTap: () async {
                                         print("TIklandı");
-                                        await c.showRewardedAdGames();
-                                        int newMoney =
-                                            c.userSnapshot?.data()?["money"] +
-                                                randomNumber;
-                                        FirebaseFirestore.instance
-                                            .collection("users")
-                                            .doc(FirebaseAuth
-                                                .instance.currentUser!.uid)
-                                            .update({
-                                          "money": newMoney,
+                                        await c.showRewardedAdGames(() {
+                                          int newMoney =
+                                              c.userSnapshot?.data()?["money"] +
+                                                  randomNumber;
+                                          FirebaseFirestore.instance
+                                              .collection("users")
+                                              .doc(FirebaseAuth
+                                                  .instance.currentUser!.uid)
+                                              .update({
+                                            "money": newMoney,
+                                          });
+                                          c.getUserInfo();
+                                          Navigator.of(context).pop();
                                         });
-                                        c.getUserInfo();
-                                        Navigator.of(context).pop();
                                       },
                                       child: Center(child: Text("Al"))),
                                 ),

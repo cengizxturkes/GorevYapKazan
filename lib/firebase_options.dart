@@ -55,7 +55,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyAgVf4PVjkGKD-hWH5I1rKEq5D3AoVtqhM',
-    appId: '1:1005984214340:android:951c6a28f4dd3b85cfbb11',
+    appId: '1:1005984214340:android:ceca0b4b5937eb8dcfbb11',
     messagingSenderId: '1005984214340',
     projectId: 'moz-para',
     storageBucket: 'moz-para.appspot.com',
@@ -67,6 +67,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '1005984214340',
     projectId: 'moz-para',
     storageBucket: 'moz-para.appspot.com',
+    androidClientId: '1005984214340-clbmdlc81k2ji3p5ovcoce36oh22dpdi.apps.googleusercontent.com',
     iosClientId: '1005984214340-56i2s4ptqimh1onets9akc4mpe054fd1.apps.googleusercontent.com',
     iosBundleId: 'com.example.gorevYapKazanApp',
   );
@@ -77,6 +78,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '1005984214340',
     projectId: 'moz-para',
     storageBucket: 'moz-para.appspot.com',
+    androidClientId: '1005984214340-clbmdlc81k2ji3p5ovcoce36oh22dpdi.apps.googleusercontent.com',
     iosClientId: '1005984214340-56i2s4ptqimh1onets9akc4mpe054fd1.apps.googleusercontent.com',
     iosBundleId: 'com.example.gorevYapKazanApp',
   );
