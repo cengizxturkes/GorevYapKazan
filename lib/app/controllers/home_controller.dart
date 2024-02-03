@@ -27,7 +27,7 @@ class HomeController extends GetxController {
   }
 
   RewardedAd? rewardedAd;
-  var rewardedUnit = 'ca-app-pub-1096844369653763/8350710222'; //testing
+  var rewardedUnit = 'ca-app-pub-1096844369653763/3924116722'; //testing
   // real ca-app-pub-1096844369653763/8350710222
 
   initRewardedAd() {
@@ -143,7 +143,6 @@ class HomeController extends GetxController {
         update();
       },
     );
-    await Future.delayed(Duration(seconds: 5));
     print("Reklam izleme tamamlandı!");
     update();
   }
