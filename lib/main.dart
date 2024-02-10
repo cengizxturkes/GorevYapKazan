@@ -30,7 +30,7 @@ Future<void> main() async {
   SystemChrome.setPreferredOrientations(
     [DeviceOrientation.portraitUp],
   );
-
+  //TO DO: Firebase.initializeApp() methodunu çağırarak Firebase'i başlatın.
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
