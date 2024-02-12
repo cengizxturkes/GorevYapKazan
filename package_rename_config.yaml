@@ -1,10 +1,10 @@
 package_rename_config:
   android:
     app_name: ParaNokta-ParaKazan
-    package_name: com.paranokta.parakazan
+    package_name: com.uygulama.paranoktaparakazan
 
   ios:
-    app_name: # (String) The display name of the ios app
+    app_name: # (String) The display name of the ios apsp
     bundle_name: # (String) The bundle name of the ios app
     package_name: # (String) The product bundle identifier of the ios app
 
