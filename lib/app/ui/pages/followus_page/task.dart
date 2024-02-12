@@ -1,3 +1,5 @@
+// ignore_for_file: unused_element
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:file_picker/file_picker.dart';
 
@@ -44,7 +46,8 @@ class GetUser extends StatelessWidget {
                       ],
                     ),
                     trailing: ElevatedButton(
-                      style: ElevatedButton.styleFrom(backgroundColor: ColorManager.instance.fourth),
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: ColorManager.instance.fourth),
                       onPressed: () {
                         showDialog(
                           context: context,
@@ -57,8 +60,10 @@ class GetUser extends StatelessWidget {
                                     Text("Görev Yönelgesi:"),
                                     SizedBox(height: 20),
                                     Column(
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      crossAxisAlignment: CrossAxisAlignment.center,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
                                       children: [
                                         Text(document["Görev Yönelgesi"]),
                                       ],
@@ -100,8 +105,10 @@ class __imageUploadState extends State<_imageUpload> {
   PlatformFile? pickedFile;
 
   Future selectFile() async {
-    final result = await FilePicker.platform
-        .pickFiles(allowMultiple: false, type: FileType.custom, allowedExtensions: ['png', 'jpg']);
+    final result = await FilePicker.platform.pickFiles(
+        allowMultiple: false,
+        type: FileType.custom,
+        allowedExtensions: ['png', 'jpg']);
 
     final path = result!.files.single.path!;
     final fileName = result.files.single.name;
@@ -120,8 +127,9 @@ class __imageUploadState extends State<_imageUpload> {
       child: Container(
         margin: PaddingUtility().defaultButtonMargin,
         padding: PaddingUtility().defaultButtonPadding,
-        decoration:
-            BoxDecoration(color: ColorManager.instance.fourth, borderRadius: BorderRadius.all(Radius.circular(20))),
+        decoration: BoxDecoration(
+            color: ColorManager.instance.fourth,
+            borderRadius: BorderRadius.all(Radius.circular(20))),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,

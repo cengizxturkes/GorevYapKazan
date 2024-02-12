@@ -1,10 +1,9 @@
 import 'dart:async';
 
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class WheelController extends GetxController {
- final StreamController<int> controller = StreamController<int>.broadcast();
+  final StreamController<int> controller = StreamController<int>.broadcast();
 
   bool isClicked = true;
 
