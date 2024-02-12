@@ -52,7 +52,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.uygulama.paranoktaparakazan"
+        applicationId "com.paranokta.parakazan"
         minSdkVersion 19
         targetSdkVersion 33
         versionCode 2
